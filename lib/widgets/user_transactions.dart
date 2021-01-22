@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../models/transaction.dart';
+
 import './new_transaction.dart';
 import './transactions_list.dart';
-import '../models/transaction.dart';
 
 class UserTransactions extends StatefulWidget {
   @override
@@ -34,7 +35,7 @@ class _UserTransactionsState extends State<UserTransactions> {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      NewTransaction(),
+      NewTransaction(_addNewTransaction),
       TransactionList(_userTransactions),
     ]);
   }
