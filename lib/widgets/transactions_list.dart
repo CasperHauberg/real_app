@@ -42,7 +42,7 @@ class TransactionList extends StatelessWidget {
                   leading: CircleAvatar(
                     radius: 30,
                     child: Padding(
-                      padding: EdgeInsets.all(6),
+                      padding: const EdgeInsets.all(6),
                       child: FittedBox(
                           child: Text('\$${transactions[index].amount}')),
                     ),
@@ -57,8 +57,8 @@ class TransactionList extends StatelessWidget {
                       ? FlatButton.icon(
                           textColor: Theme.of(context).errorColor,
                           onPressed: () => deleteTx(transactions[index].id),
-                          icon: Icon(Icons.delete),
-                          label: Text('Delete'),
+                          icon: const Icon(Icons.delete),
+                          label: const Text('Delete'),
                         )
                       : IconButton(
                           onPressed: () => deleteTx(transactions[index].id),
